@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Loan Analyzer</string>
+    <string name="newLoan">New Loan</string>
+    <string name="action_settings">Settings</string>
+    <string name="monthly">monthly</string>
+    <string name="weekly">weekly</string>
+    <string name="biweekly">bi-weekly</string>
+    <string name="bimonthly">bi-monthly</string>
+    <string name="icon_slider">&#xf1de;</string>
+    <string name="icon_calculator">&#xf1ec;</string>
+    <string name="icon_up_arrow">&#xf062;</string>
+    <string name="icon_down_arrow">&#xf063;</string>
+    <string name="none">None</string>
+    <string name="back">Back</string>
+    <string name="details">Details</string>
+    <string name="compareLoans">Compare Loans</string>
+    <string name="menu_delete">Delete Loan</string>
+    <string name="viewLoans">View Loans</string>
+    <string name="newLumpSum">New Lump</string>
+    <string name="menu_deleteLumpSum">Delete Lump Sum</string>
+    <string name="Save">Save</string>
+    <string name="Reset">Reset</string>
+    <string name="Interest">Interest</string>
+    <string name="Principal">Principal</string>
+    <string name="LoanAmount">Loan Amount</string>
+    <string name="InterestRate">Interest Rate</string>
+    <string name="Amortization">Amortization</string>
+    <string name="PaymentAmt">Payment Amt</string>
+    <string name="LumpSum">Lump Sum</string>
+    <string name="Name">Name</string>
+    <string name="StartDate">Start Date</string>
+    <string name="Schedule">Schedule</string>
+    <string name="Add">Add</string>
+    <string name="Loans">Loans</string>
+    <string name="hello">Hello World, MainView!</string>
+    <string name="defaultLeftText">Left</string>
+    <string name="labelRed">Red</string>
+    <string name="labelGreen">Green</string>
+    <string name="defaultRightText">Right</string>
+    <string name="annual">Annual</string>
+    <string name="semiannual">Semi-Annual</string>
+    <string name="compoundPeriod">Compound Period</string>
+    <string name="paymentFreq">Payment Frequency</string>
+    <string name="months">Months</string>
+    <string name="years">Years</string>
+    <string name="repeat">Repeat</string>
+    <string name="startDate">Start Date</string>
+    <string name="endDate">End Date</string>
+    <string name="value">Value</string>
+    <string name="viewChart">View Chart</string>
+    <string name="viewSchedule">View Schedule</string>
+<string name="LoanAnalyzerDatabase_onCreate">"
+CREATE TABLE FIELDS (ROW INTEGER PRIMARY KEY, NAME TEXT, YEARS INTEGER, MONTHS INTEGER, LOANAMT REAL, INTEREST_RATE REAL, PAYMENT_FREQ INTERGER, COMPOUND_PERIOD INTEGER, STARTDATE TEXT, PAYMENTAMT REAL);
+CREATE TABLE LUMPSUMS (ROW INTEGER PRIMARY KEY, LOANID INTEGER, LUMPSUMPERIOD INTEGER, VALUE REAL, STARTDATE TEXT, ENDDATE TEXT);
+"</string>
+<string name="LoanAnalyzerDatabase_onUpgrade">"
+DROP TABLE IF EXISTS FIELDS
+DROP TABLE IF EXISTS LUMPSUMS
+"</string>
+
+</resources>

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:id="@+id/mailcontent"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFCCCCCC">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/loanAmtGrp"
+        android:layout_weight="1"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:baselineAligned="true"
+        android:layout_margin="5dp"
+        android:background="#FFFFFFFF">
+        <TextView
+            android:id="@+id/loanAmtLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:text="Loan Amount"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical" android:layout_width="fill_parent"
+            android:gravity="right"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <com.cellinova.loananalyzerultra.view.TextViewObserver
+                android:id="@+id/loanAmt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:text="$450,000.00"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                custom:channelid="1"/>
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="fill_parent"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <com.cellinova.loananalyzerultra.view.DiffTextViewObserver
+                    android:id="@+id/loanAmtDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:textColor="#FF006400"
+                    android:textSize="6pt"
+                    custom:channelid="1"
+                     />
+                <com.cellinova.loananalyzerultra.view.DiffArrowViewObserver
+                    android:id="@+id/loanAmtArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FF006400"
+                    android:paddingLeft="4dp"
+                    android:gravity="right"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    custom:channelid="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/interestRateGrp"
+        android:layout_weight="1"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:layout_margin="5dp"
+        android:background="#FFFFFFFF"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:id="@+id/interestRateLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest Rate"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical" android:layout_width="fill_parent"
+            android:gravity="right"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="fill_parent"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <com.cellinova.loananalyzerultra.view.TextViewObserver
+                    android:id="@+id/interestRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.75%"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textSize="8pt"
+                    custom:channelid="3"/>
+                <com.cellinova.loananalyzerultra.view.TextViewObserver
+                    android:id="@+id/interestPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="monthly"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textSize="5pt"
+                    custom:channelid="8"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="fill_parent"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <com.cellinova.loananalyzerultra.view.DiffTextViewObserver
+                    android:id="@+id/interestDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:textColor="#FF006400"
+                    android:textSize="6pt"
+                    custom:channelid="3"
+                    />
+                <com.cellinova.loananalyzerultra.view.DiffArrowViewObserver
+                    android:id="@+id/interestArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FF006400"
+                    android:paddingLeft="4dp"
+                    android:gravity="right"
+                    android:textSize="6pt"
+                    custom:channelid="3"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/amortizationGrp"
+        android:layout_weight="1"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:baselineAligned="true"
+        android:layout_margin="5dp"
+        android:background="#FFFFFFFF">
+
+        <TextView
+            android:id="@+id/amortizationLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:text="Amortization"
+            android:textStyle="bold"
+            android:textSize="8pt" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical" android:layout_width="fill_parent"
+            android:gravity="right"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <com.cellinova.loananalyzerultra.view.TextViewObserver
+                android:id="@+id/amortization"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:text="23Y 8M"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                custom:channelid="0"/>
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="fill_parent"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <com.cellinova.loananalyzerultra.view.DiffTextViewObserver
+                    android:id="@+id/amortizationDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:textColor="#FFFF0000"
+                    android:textSize="6pt"
+                    custom:channelid="0"
+                    />
+                <com.cellinova.loananalyzerultra.view.DiffArrowViewObserver
+                    android:id="@+id/amortizationArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFF0000"
+                    android:paddingLeft="4dp"
+                    android:gravity="right"
+                    android:textSize="6pt"
+                    custom:channelid="0"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/paymentAmtGrp"
+        android:layout_weight="1"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:baselineAligned="true"
+        android:layout_margin="5dp"
+        android:background="#FFFFFFFF">
+
+        <TextView
+            android:id="@+id/paymentAmtLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:text="Payment Amount"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical" android:layout_width="fill_parent"
+            android:gravity="right"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal" android:layout_width="fill_parent"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <com.cellinova.loananalyzerultra.view.TextViewObserver
+                    android:id="@+id/paymentAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="$2,394.25"
+                    android:textSize="8pt"
+                    android:textStyle="bold"
+                    custom:channelid="2"/>
+                <com.cellinova.loananalyzerultra.view.TextViewObserver
+                    android:id="@+id/paymentPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="monthly"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textSize="5pt"
+                    custom:channelid="7"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="fill_parent"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <com.cellinova.loananalyzerultra.view.DiffTextViewObserver
+                    android:id="@+id/paymentAmtDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:textColor="#FF006400"
+                    android:textSize="6pt"
+                    custom:channelid="2"
+                    />
+                <com.cellinova.loananalyzerultra.view.DiffArrowViewObserver
+                    android:id="@+id/paymentAmtArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FF006400"
+                    android:paddingLeft="4dp"
+                    android:gravity="right"
+                    custom:channelid="2"
+                    android:textSize="6pt"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/startDateGrp"
+        android:layout_weight="1"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:baselineAligned="true"
+        android:layout_margin="5dp"
+        android:background="#FFFFFFFF">
+
+        <TextView
+            android:id="@+id/startDateLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:text="Start Date"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/startDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:text="Jul 25, 2015"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    <RelativeLayout
+    android:id="@+id/loanAmtPanel"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mailcontent"
+        android:background="#FFFFFFFF"
+    >
+        <com.cellinova.loananalyzerultra.view.NumberKeyboard
+            android:id="@+id/loanAmtKeyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            custom:format="digit"
+            custom:type="loanamt"
+            custom:title="Loan Amount"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/interestPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mailcontent"
+        android:background="#FFFFFFFF"
+        >
+        <com.cellinova.loananalyzerultra.view.InterestRatePeriodKeyboard
+            android:id="@+id/interestKeyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            custom:format="percentage"
+            custom:type="interestrate"
+            custom:title="Interest Rate"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/paymentPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mailcontent"
+        android:background="#FFFFFFFF"
+        >
+        <com.cellinova.loananalyzerultra.view.NumberPeriodKeyboard
+            android:id="@+id/paymentKeyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            custom:format="digit"
+            custom:type="paymentamt"
+            custom:title="Payment Amount"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/amortizationPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mailcontent"
+        android:background="#FFFFFFFF"
+        >
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:baselineAligned="true"
+            >
+            <LinearLayout
+                android:background="#FF5296A6"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:id="@+id/amortizationPanelTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amortization"
+                    android:textColor="#FFFFFFFF"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:paddingTop="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:gravity="left"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="3dp"
+                    android:textStyle="bold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="50"
+                    android:gravity="right"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="3dp"
+                    android:textStyle="bold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/yearSeekBar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:paddingTop="3dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:gravity="left"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="3dp"
+                    android:textStyle="bold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="12"
+                    android:gravity="right"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="3dp"
+                    android:textStyle="bold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/monthSeekBar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

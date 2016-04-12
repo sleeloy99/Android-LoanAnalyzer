@@ -1,0 +1,60 @@
+<resources>
+    <attr name="backgroundColor" format="color"/>
+    <attr name="interval" format="integer"/>
+    <attr name="delay" format="integer"/>
+    <attr name="title" format="string"/>
+    <attr name="channelid" format="integer"/>
+    <attr name="type">
+        <enum name="lumpsum" value="0" />
+        <enum name="loanamt" value="1" />
+        <enum name="paymentamt" value="2" />
+        <enum name="interestrate" value="3" />
+        <enum name="interest" value="4" />
+        <enum name="principal" value="5" />
+    </attr>
+
+    <declare-styleable name="PercentageGauge">
+        <attr name="backgroundColor"/>
+        <attr name="delay"/>
+        <attr name="interval"/>
+        <attr name="percentage" format="float"/>
+        <attr name="alphaColor" format="color"/>
+        <attr name="betaColor" format="color"/>
+        <attr name="label" format="string"/>
+        <attr name="startDegree" format="integer"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="xInset" format="float"/>
+        <attr name="yInset" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="SimpleLineChart">
+        <attr name="backgroundColor"/>
+        <attr name="delay"/>
+        <attr name="interval"/>
+        <attr name="topInset" format="float"/>
+        <attr name="bottomInset" format="float"/>
+        <attr name="rightInset" format="float"/>
+        <attr name="leftInset" format="float"/>
+        <attr name="pointRadius" format="float"/>
+        <attr name="lineWidth" format="float"/>
+        <attr name="gridLineWidth" format="float"/>
+        <attr name="yAxisGap" format="float"/>
+        <attr name="xAxisGap" format="float"/>
+        <attr name="axisTextSize" format="float"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="gridLineColor" format="color"/>
+        <attr name="yAxisFormatter" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="NumberKeyboard">
+        <attr name="format">
+            <enum name="percentage" value="0" />
+            <enum name="digit" value="1" />
+        </attr>
+        <attr name="type"/>
+        <attr name="title"/>
+    </declare-styleable>
+    <declare-styleable name="TextViewObserver">
+        <attr name="channelid"/>
+    </declare-styleable>
+
+</resources>

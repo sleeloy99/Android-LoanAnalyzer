@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cellinova.loananalyzerultra" >
+
+    <application
+        android:theme="@style/CustomActionBarTheme"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+ >
+        <provider android:name="com.cellinova.loananalyzerultra.persist.LoanContentProvider"
+            android:authorities="com.cellinova.provider.LoanAnalyzer"
+            />
+        <provider android:name="com.cellinova.loananalyzerultra.persist.LumpsumContentProvider"
+            android:authorities="com.cellinova.provider.LoanAnalyzerLumpsum"
+            />
+        <activity
+            android:name="com.cellinova.loananalyzerultra.LoansActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoanActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:parentActivityName="com.cellinova.loananalyzerultra.LoansActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cellinova.loananalyzerultra.LoansActivity" />
+        </activity>
+        <activity
+            android:name=".AddLoanActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:parentActivityName="com.cellinova.loananalyzerultra.LoansActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cellinova.loananalyzerultra.LoansActivity" />
+        </activity>
+    </application>
+
+</manifest>

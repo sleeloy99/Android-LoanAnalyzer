@@ -1,0 +1,197 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sample_main_layout">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#FF172027"
+        android:minHeight="50dp"
+    >
+        <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="New Loan"
+            android:id="@+id/titleBar"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffffff"
+            android:textIsSelectable="true"
+            /-->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Loan"
+            android:enabled="false"
+            android:id="@+id/titleBar"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffffff"
+            />
+
+    </Toolbar>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight=".5"
+        android:layout_height="0px"
+        android:layout_gravity="center_horizontal"
+        android:background="#172027">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="20dp">
+
+
+        <com.cellinova.loananalyzerultra.view.PercentageGauge
+            android:id="@+id/interestGauge"
+            custom:label="Interest"
+            custom:strokeWidth="4dp"
+            custom:betaColor="#FF28333c"
+            custom:textSize="8pt"
+            custom:alphaColor="#FFe71e64"
+            custom:backgroundColor="#172027"
+            custom:percentage="0.0"
+            custom:interval="1"
+            custom:delay="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:nestedScrollingEnabled="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            />
+
+            <com.cellinova.loananalyzerultra.view.TextViewObserver
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                android:text="I: $12,942.00"
+                android:id="@+id/interestLbl"
+                android:textAlignment="center"
+                android:textColor="#ffaaaaaa"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:singleLine="true"
+                android:gravity="center"
+                custom:channelid="5"/>
+                <LinearLayout
+                    android:orientation="horizontal" android:layout_width="fill_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                    <com.cellinova.loananalyzerultra.view.DiffTextViewObserver
+                        android:id="@+id/interestDiff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#FF00FF00"
+                        android:textSize="6pt"
+                        custom:channelid="5"
+                        />
+                    <com.cellinova.loananalyzerultra.view.DiffArrowViewObserver
+                        android:id="@+id/interestArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#FF00FF00"
+                        android:paddingLeft="4dp"
+                        custom:channelid="5"
+                        android:textSize="6pt"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp">
+
+        <com.cellinova.loananalyzerultra.view.PercentageGauge
+            android:id="@+id/principalGauge"
+            android:background="#172027"
+            custom:label="Interest"
+            custom:strokeWidth="4dp"
+            custom:betaColor="#FF28333c"
+            custom:textSize="8pt"
+            custom:alphaColor="#FF3c7ad4"
+            custom:backgroundColor="#172027"
+            custom:percentage="0.0"
+            custom:interval="1"
+            custom:delay="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            />
+
+            <com.cellinova.loananalyzerultra.view.TextViewObserver
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="P: $102,822.42"
+                android:id="@+id/principalLbl"
+                android:textAlignment="center"
+                android:textColor="#ffaaaaaa"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textIsSelectable="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                custom:channelid="4"/>
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="fill_parent"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <com.cellinova.loananalyzerultra.view.DiffTextViewObserver
+                    android:id="@+id/principalDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFF0000"
+                    android:textSize="6pt"
+                    custom:channelid="4"
+                    />
+                <com.cellinova.loananalyzerultra.view.DiffArrowViewObserver
+                    android:id="@+id/principalArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFF0000"
+                    android:paddingLeft="4dp"
+                    custom:channelid="4"
+                    android:textSize="6pt"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.cellinova.loananalyzerultra.view.SlidingTabLayout
+        android:id="@+id/sliding_tabs"
+        android:background="#172027"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_weight="2"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="0px" />
+
+</LinearLayout>

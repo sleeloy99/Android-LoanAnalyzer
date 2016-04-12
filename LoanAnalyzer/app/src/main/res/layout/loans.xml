@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="80dp"
+                android:background="#FF65B9D2"
+                android:gravity="bottom"
+                android:layout_height="fill_parent"
+                >
+<!--                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_launcher" /> -->
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/loanTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loan Analyzer"
+                    android:textSize="15pt"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFFFF"
+                    />
+            </LinearLayout>
+            <ImageButton
+                android:id="@+id/add_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:tint="@android:color/white"
+                android:background="@drawable/circle"
+                android:elevation="1dp"
+                android:layout_marginLeft="15dp"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+        <ListView
+            android:id="@+id/loans"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

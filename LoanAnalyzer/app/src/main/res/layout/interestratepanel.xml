@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:paddingTop="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/minLbl"
+            android:layout_weight="1"
+            android:text="0.0%"
+            android:gravity="left"
+            android:paddingTop="3dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="3dp"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/maxLbl"
+            android:layout_weight="1"
+            android:text="10.0%"
+            android:gravity="right"
+            android:paddingTop="3dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="3dp"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.cellinova.loananalyzerultra.view.FixedHorziontalSlider
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="15dp"
+        android:id="@+id/interestRateSeekBar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/monthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monthly"
+            android:onClick="onInterestRatePeriodClicked"/>
+        <RadioButton android:id="@+id/annually"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/annual"
+            android:onClick="onInterestRatePeriodClicked"/>
+        <RadioButton android:id="@+id/semiannual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/semiannual"
+            android:onClick="onInterestRatePeriodClicked"/>
+    </RadioGroup>
+</LinearLayout>
